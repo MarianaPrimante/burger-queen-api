@@ -9,10 +9,10 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       orderId: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       productId: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

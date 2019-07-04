@@ -1,3 +1,4 @@
+'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Products = sequelize.define('Products', {
     name: DataTypes.STRING,
@@ -5,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Products.associate = function (models) {
     Products.hasMany(models.OrdersProducts, {
-      foreignKey: "productId"
+      foreignKey: "ProductId"
     })
   };
   return Products;

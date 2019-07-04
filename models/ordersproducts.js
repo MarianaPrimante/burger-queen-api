@@ -1,15 +1,18 @@
+'use strict';
 module.exports = (sequelize, DataTypes) => {
   const OrdersProducts = sequelize.define('OrdersProducts', {
-    orderId: DataTypes.STRING,
-    productId: DataTypes.STRING
+    OrderId: DataTypes.INTEGER,
+    ProductId: DataTypes.INTEGER
   }, {});
   OrdersProducts.associate = function (models) {
     OrdersProducts.belongsTo(models.Products, {
-      foreingKey: 'productId'
+      foreingKey: 'ProductId'
     })
     OrdersProducts.belongsTo(models.Orders, {
-      foreingKey: 'orderId'
+      foreingKey: 'OrderId'
     })
   };
+  // OrdersProducts.create({ OrderId: 1, ProductId: 1 })
+
   return OrdersProducts;
 };
