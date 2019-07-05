@@ -1,4 +1,3 @@
-'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Orders = sequelize.define('Orders', {
     status: DataTypes.STRING,
@@ -12,7 +11,5 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'OrderId'
     })
   };
-
-  // Orders.create({ status: "cozinha", UserId: 1 })
   return Orders;
 };
