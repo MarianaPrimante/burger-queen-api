@@ -14,3 +14,10 @@ module.exports = (sequelize, DataTypes) => {
   };
   return OrdersProducts;
 };
+
+// Criar Pedido
+// {
+//   "UserId":3,
+//   "status":"cozinha",
+//   "OrdersProducts":[{"ProductId":1}, {"ProductId":4}]
+// }
